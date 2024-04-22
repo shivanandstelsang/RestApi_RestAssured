@@ -3,6 +3,31 @@
   <groupId>Rest_Assured</groupId>
   <artifactId>Rest_Api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+   <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <testNGXmlFiles>
+                            <testNGXmlFile>testng.xml</testNGXmlFile>
+                        </testNGXmlFiles>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
   <dependencies>
 	  <dependency>
       <groupId>io.rest-assured</groupId>
