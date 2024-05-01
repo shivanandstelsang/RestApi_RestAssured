@@ -12,8 +12,8 @@ public class OauthTest {
 		.post("https://rahulshettyacademy.com/oauthapi/oauth2/resourceOwner/token").asString();
 		System.out.println(response);
 		
-		JsonPath jpath = new JsonPath(response);
-		String token = jpath.getString("access_token");
+		 JsonPath jpath = new JsonPath(response);
+		 String token = jpath.getString("access_token");
 		
 		GetCourse gc=given().queryParams("access_token", token)
 		.when().log().all()
